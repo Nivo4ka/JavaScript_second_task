@@ -1,3 +1,4 @@
+"use strict"
 //--------------2.1----------------
 
 alert("Я JavaScript!");
@@ -6,11 +7,11 @@ alert("Я JavaScript!");
 
 let name = "Ilya";
 
-alert( `hello ${1}` ); // hello 1
+alert(`hello ${1}`); // hello 1
 
-alert( `hello ${"name"}` ); // hello name
+alert(`hello ${"name"}`); // hello name
 
-alert( `hello ${name}` ); // hello Ilya
+alert(`hello ${name}`); // hello Ilya
 
 //--------------2.6----------------
 
@@ -20,7 +21,7 @@ alert(`Тебе ${age} лет!`); // Тебе 100 лет!
 
 let isBoss = confirm("Ты здесь главный?");
 
-alert( isBoss ); // true, если нажата OK
+alert(isBoss); // true, если нажата OK
 
 //--------------2.8----------------
 
@@ -95,18 +96,18 @@ let message = login == 'Сотрудник' ? 'Привет' :
 
 //--------------2.11----------------
 
-alert( null || 2 || undefined ); // выведет 2, так как первое значение true
+alert(null || 2 || undefined); // выведет 2, так как первое значение true
 
 
-alert( 1 && null && 2 ); // выведет null, так как первое значение false
+alert(1 && null && 2); // выведет null, так как первое значение false
 
 
-alert( null || 2 && 3 || 4 ); // выведет 3, так как это последнее значение в операторе &&
+alert(null || 2 && 3 || 4); // выведет 3, так как это последнее значение в операторе &&
 
 
-if (-1 || 0) alert( 'first' ); // выведет, так как -1 имеет значение true
-if (-1 && 0) alert( 'second' ); // не выведет, так как 0 имеет значение false
-if (null || -1 && 1) alert( 'third' ); // выведет, так как результат операции && имеет значение true
+if (-1 || 0) alert('first'); // выведет, так как -1 имеет значение true
+if (-1 && 0) alert('second'); // не выведет, так как 0 имеет значение false
+if (null || -1 && 1) alert('third'); // выведет, так как результат операции && имеет значение true
 
 //--------------2.13----------------
 
@@ -126,10 +127,9 @@ while (i < 3) {
     i++;
 }
 
-while (1)
-{
-    let value=prompt("введите число большее 100", '');
-    if(+value>100)break;
+while (1) {
+    let value = prompt("введите число большее 100", '');
+    if (+value > 100) break;
 }
 
 //--------------2.14----------------
@@ -153,7 +153,8 @@ switch (browser) {
 if (browser === 'Edge') {
     alert("You've got the Edge!");
 }
-else if (browser === 'Chrome' || browser === 'Firefox' || browser === 'Safari' || browser === 'Opera') {
+else if (browser === 'Chrome' || browser === 'Firefox' ||
+    browser === 'Safari' || browser === 'Opera') {
     alert('Okay we support these browsers too');
 }
 else {
